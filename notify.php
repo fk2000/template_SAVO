@@ -2,7 +2,7 @@
 // Email Submit
 // Note: filter_var() requires PHP >= 5.2.0
 if ( isset($_POST['email'])  && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ) {
- 
+
   // detect & prevent header injections
   $test = "/(content-type|bcc:|cc:|to:)/i";
   foreach ( $_POST as $key => $val ) {
@@ -16,9 +16,9 @@ $headers = 'From: '  . '<' . $_POST["email"] . '>' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
   //
-  mail( "vijayanpp02@gmail.com",  $headers );
- 
+  mail( "fujiwarak@gmail.com",  $headers );
+
   //      ^
-  //  Replace with your email 
+  //  Replace with your email
 }
 ?>
